@@ -10,6 +10,8 @@ React-Slick: npm install react-slick (Slider mainly)
 Axios: npm i axios(API)
 
 HeadlessUi: npm install @headlessui/react(UI purpose)
+React-icons: npm install react-icons`
+React-ROuter-dom: npm i react-router-dom
 
 >> Run Appln
 npm start
@@ -22,9 +24,9 @@ workflow: from index to app
 >>React-Context-API
 
 #    Pages:                             HOC's(Layouts):                                       
->>Home.Page.jsx                         Default.Hoc.jsx
->>Movie.Page.jsx                        Movie.Hoc.jsx
->>Play.Page.jsx                         Default.Hoc.jsx
+>>Home.Page.jsx                         Default.layout.jsx
+>>Movie.Page.jsx                        Movie.layout.jsx
+>>Play.Page.jsx                         Default.layout.jsx
 
 # Components:
 >>Cast                                Cast.Component.jsx
@@ -45,3 +47,9 @@ workflow: from index to app
 >>https://react-slick.neostack.com/
 >>https://www.npmjs.com/package/axios
 >>https://headlessui.com/react/dialog
+
+
+
+
+# Shortcut
+>> rafce
