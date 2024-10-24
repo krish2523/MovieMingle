@@ -47,6 +47,7 @@ workflow: from index to app
 >>https://react-slick.neostack.com/
 >>https://www.npmjs.com/package/axios
 >>https://headlessui.com/react/dialog
+>>https://react-icons.github.io/react-icons/
 
 
 

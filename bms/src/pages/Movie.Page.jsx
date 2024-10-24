@@ -1,9 +1,10 @@
 import React from 'react'
+import MovielayoutHoc from '../layout/Movie.layout'
 
 const MoviePage = () => {
   return (
     <div>MoviePage</div>
   )
-}
+};
 
-export default MoviePage
+export default MovielayoutHoc(MoviePage);
