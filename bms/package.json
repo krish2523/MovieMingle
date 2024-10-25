@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "homepage": "https://<username>.github.io/<repository-name>",
+    "homepage": "https://krish2523.github.io/Book-My-Show",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
 
