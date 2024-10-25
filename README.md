@@ -104,3 +104,16 @@ workflow: from index to app
        >>Child Node----||
                        ||--POD
                        ||--Development-> Keeps close Eye on POD
+
+Docker:
+       >> Image
+              >> Container1
+              >> Container2
+              >> Container3..
+
+## Docker >> Kubernetes
+
+AWS (EC2)(VM)
+VM
+              Kubernetes
+Base OS
