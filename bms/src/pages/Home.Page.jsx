@@ -1,15 +1,38 @@
-import React, { useState } from "react";
-import DefaultlayoutHoc from "../layout/Default.layout";
-
-//Components
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+// Components
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.Component";
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel.Component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
+// Layout HOC
+import DefaultlayoutHoc from "../layout/Default.layout";
 
 const HomePage = () => {
-  const { recommendedMovies, setrecommendedMovies } = useState([]);
-  const { PremierMovies, setPremierMovies } = useState([]);
-  const { OnlineStreamingEvents, setOnlineStreamingEvents } = useState([]);
+  const [recommendedMovies, setRecommendedMovies] = useState([]);
+  const [PremierMovies, setPremierMovies] = useState([]);
+  const [OnlineStreamingEvents, setOnlineStreamEvents] = useState([]);
+
+  useEffect(() => {
+    const requestTopRatedMovies = async () => {
+      const getTopRatedMovies = await axios.get("/movie/top_rated");
+      setRecommendedMovies(getTopRatedMovies.data.results);
+    };
+    requestTopRatedMovies();
+  }, []);
+  useEffect(() => {
+    const requestPopularMovies = async () => {
+      const getPopularMovies = await axios.get("/movie/popular");
+      setPremierMovies(getPopularMovies.data.results);
+    };
+    requestPopularMovies();
+  }, []);
+  useEffect(() => {
+    const requestrecommendedMovies = async () => {
+      const getrecommendedMovies = await axios.get("/movie/upcoming");
+      setOnlineStreamEvents(getrecommendedMovies.data.results);
+    };
+    requestrecommendedMovies();
+  }, []);
   return (
     <>
       <HeroCarousel />
@@ -22,7 +45,7 @@ const HomePage = () => {
       <div className="container mx-auto px-4 md:px-12 my-8">
         <PosterSlider
           title="Recommended Movies"
-          subject="List of Recommended Movies"
+          subTitle="List of Recommended Movies"
           posters={recommendedMovies}
           isDark={false}
         />
@@ -38,7 +61,7 @@ const HomePage = () => {
           </div>
           <PosterSlider
             title="Premiers"
-            subject="Brand new releases every Friday"
+            subTitle="Brand new releases every Friday"
             posters={PremierMovies}
             isDark={true}
           />
@@ -47,7 +70,7 @@ const HomePage = () => {
       <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
         <PosterSlider
           title="Online Streaming Events"
-          subject="Online Streaming Events"
+          subTitle="Online Streaming Events"
           posters={OnlineStreamingEvents}
           isDark={false}
         />

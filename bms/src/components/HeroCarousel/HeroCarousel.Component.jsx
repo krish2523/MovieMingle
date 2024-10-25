@@ -80,37 +80,80 @@ const HeroCarousel = () => {
     arrows: true,
     slidesToShow: 3,
     infinite: true,
-    dots: true,
     speed: 500,
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-  };
-  const settings = {
-    arrows: true,
-    slidesToShow: 3,
-    infinite: true,
-    dots: true,
-    speed: 500,
-    slidesToScroll: 2,
+    slideToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const settings = {
+    arrows: true,
+    slidesToShow: 2,
+    infinite: true,
+    speed: 500,
+    slideToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <>
       <div className="lg:hidden">
         <HeroSlider {...settings}>
-          {Images.map((Images) => (
-            <div className="w-full h-96 md:h-80 py-3">
+          {Images.map((Images, index) => (
+            <div className="w-full h-56 md:h-80 py-3" key={index}>
               <img
                 src={`https://image.tmdb.org/t/p/original${Images.backdrop_path}`}
                 alt="Hero Banner"
@@ -122,8 +165,8 @@ const HeroCarousel = () => {
       </div>
       <div className="hidden lg:block">
         <HeroSlider {...settingsLG}>
-          {Images.map((Images) => (
-            <div className="w-full h-96 px-2 py-3">
+          {Images.map((Images, index) => (
+            <div className="w-full h-96 px-2 py-3" key={index}>
               <img
                 src={`https://image.tmdb.org/t/p/original${Images.backdrop_path}`}
                 alt="Hero Banner"
