@@ -52,7 +52,55 @@ workflow: from index to app
 
 # theMovieDB  API Key: c096ce9a4c058f633dea0bdc4a5aed0f
 
-
-
 # Shortcut
 >> rafce
+
+# DevOps
+>> Dev: Development
+>> Ops: Operation
+
+       Dev                                         Ops
+       (Developer)-------------share code--------->Operations(Testing,Scaling and Bug Fixing)
+       Dev----------share code-------->Teasting Team-----|
+                                                         |-----Code is Ok -----> Operations
+                                                         |-----Code is Not Ok----> Dev
+# Docker & Kuberneetes
+
+### Virtualization
+( I could run virtual OS on the top of my real time OS)
+
+                     Virtual OS:Linux
+
+                     Base/Local OS: Windows
+>> Resources shared with Virtual OS: [RAM, ROM, GPU]
+
+
+              Linux                              Unix
+       (2GB,500GB,2GB)                      (6GB,500GB,2GB)
+                            Base: Windows
+                     8GB RAM,1TB ROM, 4GB GPU
+
+### Containerization (Docker)
+
+              Linux                               Unix
+       (2GB,500GB,2GB)                      (6GB,500GB,2GB)
+                           
+                             Docker Engine:Will Share the RAM accordingly for priority basis only first to linux then to unix
+                           
+                            Base: Windows
+                     8GB RAM,1TB ROM, 4GB GPU
+
+# Docker (EC2):
+>>Image
+>>Containers(Servers)
+
+       >>Docker Deamon----------->Server
+       >>Docker Client----------->Client
+       >>Docker Swarm------------>Orchestration
+
+# Kubernetes (Orchestra)
+>>Nodes
+       >>Master Node(Orchestra)
+       >>Child Node----||
+                       ||--POD
+                       ||--Development-> Keeps close Eye on POD

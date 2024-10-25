@@ -9,7 +9,7 @@ const PaymentModel = ({ setIsOpen, isOpen, price }) => {
 
   const launchRazorPay = () => {
     let options = {
-      key: "rzp_test_Taf4Olo2TluDGc",
+      key: "rzp_test_4YA1ap8GCVG4Vo",
       amount: price * 100,
       currency: "INR",
       name: "Book My Show Clone",
@@ -63,7 +63,7 @@ const PaymentModel = ({ setIsOpen, isOpen, price }) => {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Hello please click non the below button to make a payment.
+                      Hello please click on the below button to make a payment.
                     </p>
                   </div>
 
