@@ -117,3 +117,8 @@ AWS (EC2)(VM)
 VM
               Kubernetes
 Base OS
+
+
+
+resume worded
+canva
