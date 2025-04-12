@@ -40,9 +40,9 @@ function NavLg() {
         <div className="flex items-center w-1/2 gap-3">
           <div className="w-10 h-10">
             <img
-              src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png"
+              src="/MovieMingle.png"
               alt="logo"
-              className="w-full h-full"
+              className="w-full h-full rounded"
             />
           </div>
           <div className="w-full flex items-center gap-5 bg-white px-3 py-1 rounded-md">
@@ -58,7 +58,7 @@ function NavLg() {
           <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white">
             Kolkata <BiChevronDown />
           </span>
-          <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
+          <button className="bg-orange-600 text-white px-2 py-1 text-sm rounded">
             Sign In
           </button>
           <div className="w-8 h-8 text-white">

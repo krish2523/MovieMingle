@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Poster from "../Poster/Poster.Component";
 
 const PosterSlider = (props) => {
   const { posters, title, subTitle, isDark, config } = props;
+
+  // Use state to track if the component has mounted
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []); // Ensure this runs only once after the component mounts
 
   const settings = {
     infinite: false,
@@ -36,6 +43,10 @@ const PosterSlider = (props) => {
     ],
   };
 
+  if (!mounted) {
+    return null; // Render nothing before the component is mounted
+  }
+
   return (
     <>
       <div className="flex flex-col items-start sm:ml-3 ml-0 my-2">
@@ -50,14 +61,13 @@ const PosterSlider = (props) => {
           {subTitle}
         </p>
       </div>
-      {config && (
+      {config ? (
         <Slider {...config}>
           {posters.map((each, index) => (
             <Poster {...each} isDark={isDark} key={index} />
           ))}
         </Slider>
-      )}
-      {!config && (
+      ) : (
         <Slider {...settings}>
           {posters.map((each, index) => (
             <Poster {...each} isDark={isDark} key={index} />
