@@ -19,7 +19,6 @@ const HomePage = () => {
     };
     requestTopRatedMovies();
   }, []);
-
   useEffect(() => {
     const requestPopularMovies = async () => {
       const getPopularMovies = await axios.get("/movie/popular");
@@ -27,7 +26,6 @@ const HomePage = () => {
     };
     requestPopularMovies();
   }, []);
-
   useEffect(() => {
     const requestrecommendedMovies = async () => {
       const getrecommendedMovies = await axios.get("/movie/upcoming");
@@ -35,7 +33,6 @@ const HomePage = () => {
     };
     requestrecommendedMovies();
   }, []);
-
   return (
     <>
       <HeroCarousel />
@@ -45,7 +42,6 @@ const HomePage = () => {
         </h1>
         <EntertainmentCardSlider />
       </div>
-
       <div className="container mx-auto px-4 md:px-12 my-8">
         <PosterSlider
           title="Recommended Movies"
@@ -54,14 +50,13 @@ const HomePage = () => {
           isDark={false}
         />
       </div>
-
       <div className="bg-premier-800 py-12">
         <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
           <div className="md-flex">
             <img
               src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png"
               alt="Rupay"
-              className="w-full h-auto" // Use h-auto to preserve aspect ratio
+              className="w-full h-full"
             />
           </div>
           <PosterSlider
@@ -72,7 +67,6 @@ const HomePage = () => {
           />
         </div>
       </div>
-
       <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
         <PosterSlider
           title="Online Streaming Events"
@@ -81,30 +75,6 @@ const HomePage = () => {
           isDark={false}
         />
       </div>
-
-      {/* TailwindCSS Media Queries for Responsiveness */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .container {
-            padding-left: 1rem;
-            padding-right: 1rem;
-          }
-          .text-2xl {
-            font-size: 1.5rem;
-          }
-          .sm\:ml-3 {
-            margin-left: 1rem;
-          }
-          .bg-premier-800 {
-            background-color: #1a202c;
-          }
-        }
-        @media (max-width: 480px) {
-          .text-2xl {
-            font-size: 1.25rem;
-          }
-        }
-      `}</style>
     </>
   );
 };
