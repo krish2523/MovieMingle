@@ -19,7 +19,7 @@ const DefaultlayoutHoc =
               <h3 className="text-xl font-semibold text-center mb-2">
                 Contact Us
               </h3>
-              <p>Email: support@bookmyshowclone.com</p>
+              <p>Email: support@moviemingle.com</p>
               <p>Phone: +91 98765 43210</p>
               <p>Address: 123, React Street, JavaScript City, WebLand 400001</p>
             </div>
