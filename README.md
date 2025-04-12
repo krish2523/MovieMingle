@@ -1,5 +1,5 @@
-# Book My Show
- This is a Project on Book My Show Clone application 
+# MovieMingle
+ This is a Project on buying and renting recommended movie application 
 # cmds
 React: npx create-react-app bms
        cd bms
