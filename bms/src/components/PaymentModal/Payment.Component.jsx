@@ -9,10 +9,10 @@ const PaymentModel = ({ isOpen, setIsOpen, price }) => {
       key: "rzp_test_4YA1ap8GCVG4Vo",
       amount: price * 100,
       currency: "INR",
-      name: "Book My Show Clone",
+      name: "Movie Mingle",
       description: "Movie purchase or rental",
       image:
-        "https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png",
+        "bms\public\MovieMingle.png",
       handler: () => {
         setIsOpen(false);
         alert("Payment Successful");

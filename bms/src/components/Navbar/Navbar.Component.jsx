@@ -58,7 +58,7 @@ function NavLg() {
           <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white">
             Kolkata <BiChevronDown />
           </span>
-          <button className="bg-orange-600 text-white px-2 py-1 text-sm rounded">
+          <button className="bg-orange-700 text-white px-2 py-1 text-sm rounded">
             Sign In
           </button>
           <div className="w-8 h-8 text-white">

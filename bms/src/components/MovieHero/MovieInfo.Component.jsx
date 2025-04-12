@@ -24,13 +24,13 @@ const MovieInfo = ({ movie }) => {
         <div className="flex items-center gap-3 w-full">
           <button
             onClick={rentMovie}
-            className="bg-red-500 w-full py-3 text-white font-semibold rounded-lg"
+            className="bg-orange-700 w-full py-3 text-white font-semibold rounded-lg"
           >
             Rent ₹149
           </button>
           <button
             onClick={buyMovie}
-            className="bg-red-600 w-full py-3 text-white font-semibold rounded-lg"
+            className="bg-orange-600 w-full py-3 text-white font-semibold rounded-lg"
           >
             Buy ₹599
           </button>

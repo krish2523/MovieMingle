@@ -219,7 +219,7 @@ const MoviePage = () => {
         {/* BMS Exclusive */}
         <PosterSlider
           config={sliderSettings}
-          title="BMS XCLUSIVE"
+          title="Mingle XCLUSIVE"
           posters={similarMovies}
           isDark={false}
         />
